@@ -1,0 +1,252 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="WebsiteBanHang_DATN.ClientBanHang.Client" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server"><!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Đông Dương Sport | Sự lựa chọn thông minh</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/logo-web-mini.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="getTime();">
+    <form id="form1" runat="server">
+        <div>
+            <header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<asp:Repeater ID="rptCuahang" runat="server">
+									<ItemTemplate>
+										<li><a href="#"><i class="fa fa-phone"></i> +<%# Eval("sSdt") %></a></li>
+										<li><a href="#"><i class="fa fa-envelope"></i> <%# Eval("sEmail") %></a></li>
+									</ItemTemplate>
+								</asp:Repeater>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+							<%--<li><a href="#"><i class="fa fa-clock"></i><div id="showtime"></div></a></li>--%>
+							<li class="dropdown"><a href="#"><i class="fa fa-user"></i><span><asp:Label ID="lbTendangnhap" runat="server" Text="Label"></asp:Label></span></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li id="dangxuat" runat="server"><a class="btnx" href="Dangnhap.aspx?mode=logout">Đăng xuất</a></li>
+                                    </ul>
+							</li>
+							</ul>
+							<%--<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>--%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 clearfix">
+						<div class="logo pull-left">
+							<a href="Trangchu.aspx"><img src="images/logo-web.png" alt="" style="width: 139px; height: 39px;"/></a>
+						</div>
+					</div>
+					<div class="col-md-8 clearfix">
+						<div class="shop-menu clearfix pull-right">
+                             <ul class="nav navbar-nav collapse navbar-collapse">
+								<li class="dropdown" id="taikhoan" runat="server"><a href="#"><i class="fa fa-user"></i>Tài khoản</a>
+                                    <ul role="menu" class="sub-menu">
+                                         <li><a class="btnx" href="Dangnhap.aspx">Đăng nhập</a></li>
+										<li><a href="Dangki.aspx">Đăng ký</a></li> 
+                                    </ul>
+                                </li> 
+								 <li class="dropdown"><a href="Giohang.aspx"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="Trangchu.aspx" class="active">Trang chủ</a></li>
+								<li class="dropdown"><a href="#">Cửa hàng<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+										<li><a href="Trangchitiet.aspx">Thời trang thể thao</a></li> 
+										<li><a href="Trangchitiet.aspx"">Phụ kiện thể thao</a></li> 
+                                    </ul>
+                                </li> 
+								<li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="#">Thể thao</a></li>
+										<li><a href="#">Liên quan</a></li>
+                                    </ul>
+                                </li> 
+								<li><a href="#top" style="transition: 0.5s;">Giới thiệu</a></li>
+								<li><a href="#">Liên hệ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4" style="display: inline-flex;">
+						<asp:TextBox ID="txtTimkiem" runat="server" CssClass="form-control form-control-lg" placeholder="Nhập thông tin tìm kiếm..."></asp:TextBox>
+                        <asp:LinkButton ID="lbtnTimkiem" runat="server" CssClass="btn btn-primary" style="margin-top: 0px; margin-left: 5px;" OnClick="lbtnTimkiem_Click"><i class="fa fa-search"></i></asp:LinkButton>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+			<section>
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				</asp:ContentPlaceHolder>
+			</section>
+			<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Dịch vụ</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Hỗ trợ trực tuyến</a></li>
+								<li><a href="#">Liên hệ</a></li>
+								<li><a href="#">Order</a></li>
+								<li><a href="#">Thay đổi vị trí</a></li>
+								<li><a href="#">FAQ’s</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Danh mục</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Áo thun</a></li>
+								<li><a href="#">Nam</a></li>
+								<li><a href="#">Nữ</a></li>
+								<li><a href="#">Thời trang thể thao</a></li>
+								<li><a href="#">Phụ kiện</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Chính sách</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Cho người sử dụng</a></li>
+								<li><a href="#">Đổi trả</a></li>
+								<li><a href="#">Thanh toán</a></li>
+								<li><a href="#">Khuyến mại</a></li>
+								<li><a href="#">Tích điểm</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Giới thiệu</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Thông tin cửa hàng</a></li>
+								<li><a href="#">Nhân viên</a></li>
+								<li><a href="#">Vị trí cửa hàng</a></li>
+								<li><a href="#">Chương trình khuyến mại</a></li>
+								<li><a href="#">Bản quyền</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Về chúng tôi</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Địa chỉ email..." />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Đông Dương Sport</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Cửa hàng dụng cụ, thời trang thể thao Đông Dương Sport</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="#">Phạm Xuân Tú</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+        </div>
+
+        <script src="js/jquery.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/jquery.scrollUp.min.js"></script>
+	    <script src="js/price-range.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+    </form>
+	<script>
+        function getTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('showtime').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () { getTime() }, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+</body>
+</html>

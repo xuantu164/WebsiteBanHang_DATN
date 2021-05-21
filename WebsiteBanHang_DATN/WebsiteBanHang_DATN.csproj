@@ -1,0 +1,643 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63AF767C-569E-4F77-BBCB-AC83C06DB22C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsiteBanHang_DATN</RootNamespace>
+    <AssemblyName>WebsiteBanHang_DATN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44321</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminBanHang\assets\css\style.css" />
+    <Content Include="AdminBanHang\assets\documentation\documentation.html" />
+    <Content Include="AdminBanHang\assets\images\auth\lockscreen-bg.jpg" />
+    <Content Include="AdminBanHang\assets\images\auth\login-bg.jpg" />
+    <Content Include="AdminBanHang\assets\images\auth\register-bg.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\avt.png" />
+    <Content Include="AdminBanHang\assets\images\faces\face1.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face10.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face11.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face12.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face13.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face14.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face15.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face16.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face17.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face18.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face19.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face2.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face20.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face21.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face22.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face23.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face24.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face25.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face26.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face27.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face3.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face4.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face5.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face6.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face7.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face8.jpg" />
+    <Content Include="AdminBanHang\assets\images\faces\face9.jpg" />
+    <Content Include="AdminBanHang\assets\images\fav-icon.png" />
+    <Content Include="AdminBanHang\assets\images\favicon.png" />
+    <Content Include="AdminBanHang\assets\images\logo-mini.svg" />
+    <Content Include="AdminBanHang\assets\images\logo-web-mini.png" />
+    <Content Include="AdminBanHang\assets\images\logo-web.png" />
+    <Content Include="AdminBanHang\assets\images\logo.svg" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo1.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo2.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo3.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo4.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo5.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo6.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aobongdatreemkhonglogo7.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_ac.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_ajax.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_arsernal.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_atl1.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_atl2.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_barca.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_barca2.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_bayern.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_everton.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_let.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_liverpool.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_mc.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_mu.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_psg_trang.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_real.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_tot.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_tot_2.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_tot_3.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aoclb_tot_trang.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo.jpg" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo2.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo4.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo5.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo6.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aokhonglogo7.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_arg.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_bodaonha.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_han.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_han_do.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_han_xanh.png" />
+    <Content Include="AdminBanHang\assets\images\mathang\aotuyen_phap.png" />
+    <Content Include="AdminBanHang\assets\js\chart.js" />
+    <Content Include="AdminBanHang\assets\js\Chart.min.js" />
+    <Content Include="AdminBanHang\assets\js\dashboard.js" />
+    <Content Include="AdminBanHang\assets\js\data-table.js" />
+    <Content Include="AdminBanHang\assets\js\dataTables.bootstrap4.js" />
+    <Content Include="AdminBanHang\assets\js\documentation.js" />
+    <Content Include="AdminBanHang\assets\js\file-upload.js" />
+    <Content Include="AdminBanHang\assets\js\hoverable-collapse.js" />
+    <Content Include="AdminBanHang\assets\js\jquery.cookie.js" />
+    <Content Include="AdminBanHang\assets\js\jquery.dataTables.js" />
+    <Content Include="AdminBanHang\assets\js\off-canvas.js" />
+    <Content Include="AdminBanHang\assets\js\tabs.js" />
+    <Content Include="AdminBanHang\assets\js\template.js" />
+    <Content Include="AdminBanHang\assets\pages\charts\chartjs.html" />
+    <Content Include="AdminBanHang\assets\pages\forms\basic_elements.html" />
+    <Content Include="AdminBanHang\assets\pages\icons\mdi.html" />
+    <Content Include="AdminBanHang\assets\pages\samples\lock-screen.html" />
+    <Content Include="AdminBanHang\assets\pages\samples\login-2.html" />
+    <Content Include="AdminBanHang\assets\pages\samples\login.html" />
+    <Content Include="AdminBanHang\assets\pages\samples\register-2.html" />
+    <Content Include="AdminBanHang\assets\pages\samples\register.html" />
+    <Content Include="AdminBanHang\assets\pages\tables\basic-table.html" />
+    <Content Include="AdminBanHang\assets\pages\ui-features\buttons.html" />
+    <Content Include="AdminBanHang\assets\pages\ui-features\typography.html" />
+    <Content Include="AdminBanHang\assets\partials\_footer.html" />
+    <Content Include="AdminBanHang\assets\partials\_navbar.html" />
+    <Content Include="AdminBanHang\assets\partials\_settings-panel.html" />
+    <Content Include="AdminBanHang\assets\partials\_sidebar.html" />
+    <Content Include="AdminBanHang\assets\vendors\base\vendor.bundle.base.css" />
+    <Content Include="AdminBanHang\assets\vendors\base\vendor.bundle.base.js" />
+    <Content Include="AdminBanHang\assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="AdminBanHang\assets\vendors\datatables.net-bs4\dataTables.bootstrap4.css" />
+    <Content Include="AdminBanHang\assets\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <Content Include="AdminBanHang\assets\vendors\datatables.net\jquery.dataTables.js" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="AdminBanHang\Baocao.aspx" />
+    <Content Include="AdminBanHang\Cuahang.aspx" />
+    <Content Include="AdminBanHang\Donhang.aspx" />
+    <Content Include="AdminBanHang\Kho.aspx" />
+    <Content Include="AdminBanHang\PhieuNhapKho.aspx" />
+    <Content Include="AdminBanHang\PhieuXuatKho.aspx" />
+    <Content Include="AdminBanHang\Taikhoan.aspx" />
+    <Content Include="AdminBanHang\Nguoidung\Dangki.aspx" />
+    <Content Include="AdminBanHang\Nguoidung\Dangnhap.aspx" />
+    <Content Include="AdminBanHang\Mathang.aspx" />
+    <Content Include="AdminBanHang\Nhaphang.aspx" />
+    <Content Include="AdminBanHang\Them_SuaDonHang.aspx" />
+    <Content Include="AdminBanHang\Them_SuaDonNhapHang.aspx" />
+    <Content Include="AdminBanHang\Them_SuaMatHang.aspx" />
+    <Content Include="AdminBanHang\Them_SuaPhieuNhapKho.aspx" />
+    <Content Include="AdminBanHang\Them_SuaPhieuXuatKho.aspx" />
+    <Content Include="AdminBanHang\Them_SuaTaiKhoan.aspx" />
+    <Content Include="AdminBanHang\Trangchu.aspx" />
+    <Content Include="ClientBanHang\css\animate.css" />
+    <Content Include="ClientBanHang\css\bootstrap.min.css" />
+    <Content Include="ClientBanHang\css\font-awesome.min.css" />
+    <Content Include="ClientBanHang\css\main.css" />
+    <Content Include="ClientBanHang\css\prettyPhoto.css" />
+    <Content Include="ClientBanHang\css\price-range.css" />
+    <Content Include="ClientBanHang\css\responsive.css" />
+    <Content Include="ClientBanHang\Dangki.aspx" />
+    <Content Include="ClientBanHang\Dangnhap.aspx" />
+    <Content Include="ClientBanHang\fonts\fontawesome-webfont.svg" />
+    <Content Include="ClientBanHang\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ClientBanHang\Giohang.aspx" />
+    <Content Include="ClientBanHang\images\2.png" />
+    <Content Include="ClientBanHang\images\3.png" />
+    <Content Include="ClientBanHang\images\4.png" />
+    <Content Include="ClientBanHang\images\404\404.png" />
+    <Content Include="ClientBanHang\images\5.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo1.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo2.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo3.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo4.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo5.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo6.png" />
+    <Content Include="ClientBanHang\images\aobongdatreemkhonglogo7.png" />
+    <Content Include="ClientBanHang\images\aoclb_ajax.png" />
+    <Content Include="ClientBanHang\images\aoclb_arsernal.png" />
+    <Content Include="ClientBanHang\images\aoclb_atl1.png" />
+    <Content Include="ClientBanHang\images\aoclb_atl2.png" />
+    <Content Include="ClientBanHang\images\aoclb_barca.png" />
+    <Content Include="ClientBanHang\images\aoclb_barca2.png" />
+    <Content Include="ClientBanHang\images\aoclb_bayern.png" />
+    <Content Include="ClientBanHang\images\aoclb_everton.png" />
+    <Content Include="ClientBanHang\images\aoclb_let.png" />
+    <Content Include="ClientBanHang\images\aoclb_liverpool.png" />
+    <Content Include="ClientBanHang\images\aoclb_mu.png" />
+    <Content Include="ClientBanHang\images\aoclb_real.png" />
+    <Content Include="ClientBanHang\images\aoclb_tot.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo.jpg" />
+    <Content Include="ClientBanHang\images\aokhonglogo.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo2.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo4.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo5.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo6.png" />
+    <Content Include="ClientBanHang\images\aokhonglogo7.png" />
+    <Content Include="ClientBanHang\images\banner.png" />
+    <Content Include="ClientBanHang\images\blog\blog-one.jpg" />
+    <Content Include="ClientBanHang\images\blog\blog-three.jpg" />
+    <Content Include="ClientBanHang\images\blog\blog-two.jpg" />
+    <Content Include="ClientBanHang\images\blog\man-four.jpg" />
+    <Content Include="ClientBanHang\images\blog\man-one.jpg" />
+    <Content Include="ClientBanHang\images\blog\man-three.jpg" />
+    <Content Include="ClientBanHang\images\blog\man-two.jpg" />
+    <Content Include="ClientBanHang\images\blog\socials.png" />
+    <Content Include="ClientBanHang\images\cart\one.png" />
+    <Content Include="ClientBanHang\images\cart\three.png" />
+    <Content Include="ClientBanHang\images\cart\two.png" />
+    <Content Include="ClientBanHang\images\dongduongsport.png" />
+    <Content Include="ClientBanHang\images\dongduongsport2.png" />
+    <Content Include="ClientBanHang\images\dongduongsport3.png" />
+    <Content Include="ClientBanHang\images\fav-icon.png" />
+    <Content Include="ClientBanHang\images\home\bg_border.png" />
+    <Content Include="ClientBanHang\images\home\gallery1.jpg" />
+    <Content Include="ClientBanHang\images\home\gallery2.jpg" />
+    <Content Include="ClientBanHang\images\home\gallery3.jpg" />
+    <Content Include="ClientBanHang\images\home\gallery4.jpg" />
+    <Content Include="ClientBanHang\images\home\girl1.jpg" />
+    <Content Include="ClientBanHang\images\home\girl2.jpg" />
+    <Content Include="ClientBanHang\images\home\girl3.jpg" />
+    <Content Include="ClientBanHang\images\home\iframe1.png" />
+    <Content Include="ClientBanHang\images\home\iframe2.png" />
+    <Content Include="ClientBanHang\images\home\iframe3.png" />
+    <Content Include="ClientBanHang\images\home\iframe4.png" />
+    <Content Include="ClientBanHang\images\home\logo.png" />
+    <Content Include="ClientBanHang\images\home\map.png" />
+    <Content Include="ClientBanHang\images\home\new.png" />
+    <Content Include="ClientBanHang\images\home\partner1.png" />
+    <Content Include="ClientBanHang\images\home\partner2.png" />
+    <Content Include="ClientBanHang\images\home\partner3.png" />
+    <Content Include="ClientBanHang\images\home\partner4.png" />
+    <Content Include="ClientBanHang\images\home\pricing.png" />
+    <Content Include="ClientBanHang\images\home\product1.jpg" />
+    <Content Include="ClientBanHang\images\home\product2.jpg" />
+    <Content Include="ClientBanHang\images\home\product3.jpg" />
+    <Content Include="ClientBanHang\images\home\product4.jpg" />
+    <Content Include="ClientBanHang\images\home\product5.jpg" />
+    <Content Include="ClientBanHang\images\home\product6.jpg" />
+    <Content Include="ClientBanHang\images\home\recommend1.jpg" />
+    <Content Include="ClientBanHang\images\home\recommend2.jpg" />
+    <Content Include="ClientBanHang\images\home\recommend3.jpg" />
+    <Content Include="ClientBanHang\images\home\sale.png" />
+    <Content Include="ClientBanHang\images\home\searchicon.png" />
+    <Content Include="ClientBanHang\images\home\shipping.jpg" />
+    <Content Include="ClientBanHang\images\logo-web-mini.png" />
+    <Content Include="ClientBanHang\images\logo-web.png" />
+    <Content Include="ClientBanHang\images\product-details\1.jpg" />
+    <Content Include="ClientBanHang\images\product-details\new.jpg" />
+    <Content Include="ClientBanHang\images\product-details\rating.png" />
+    <Content Include="ClientBanHang\images\product-details\share.png" />
+    <Content Include="ClientBanHang\images\product-details\similar1.jpg" />
+    <Content Include="ClientBanHang\images\product-details\similar2.jpg" />
+    <Content Include="ClientBanHang\images\product-details\similar3.jpg" />
+    <Content Include="ClientBanHang\images\shop\advertisement.jpg" />
+    <Content Include="ClientBanHang\images\shop\product10.jpg" />
+    <Content Include="ClientBanHang\images\shop\product11.jpg" />
+    <Content Include="ClientBanHang\images\shop\product12.jpg" />
+    <Content Include="ClientBanHang\images\shop\product7.jpg" />
+    <Content Include="ClientBanHang\images\shop\product8.jpg" />
+    <Content Include="ClientBanHang\images\shop\product9.jpg" />
+    <Content Include="ClientBanHang\js\bootstrap.min.js" />
+    <Content Include="ClientBanHang\js\contact.js" />
+    <Content Include="ClientBanHang\js\gmaps.js" />
+    <Content Include="ClientBanHang\js\html5shiv.js" />
+    <Content Include="ClientBanHang\js\jquery.js" />
+    <Content Include="ClientBanHang\js\jquery.prettyPhoto.js" />
+    <Content Include="ClientBanHang\js\jquery.scrollUp.min.js" />
+    <Content Include="ClientBanHang\js\main.js" />
+    <Content Include="ClientBanHang\js\price-range.js" />
+    <Content Include="ClientBanHang\Timkiem.aspx" />
+    <Content Include="ClientBanHang\Trangchitiet.aspx" />
+    <Content Include="ClientBanHang\Trangchu.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminBanHang\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Baocao.aspx.cs">
+      <DependentUpon>Baocao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Baocao.aspx.designer.cs">
+      <DependentUpon>Baocao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Cuahang.aspx.cs">
+      <DependentUpon>Cuahang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Cuahang.aspx.designer.cs">
+      <DependentUpon>Cuahang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Donhang.aspx.cs">
+      <DependentUpon>Donhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Donhang.aspx.designer.cs">
+      <DependentUpon>Donhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Kho.aspx.cs">
+      <DependentUpon>Kho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Kho.aspx.designer.cs">
+      <DependentUpon>Kho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\PhieuNhapKho.aspx.cs">
+      <DependentUpon>PhieuNhapKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\PhieuNhapKho.aspx.designer.cs">
+      <DependentUpon>PhieuNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\PhieuXuatKho.aspx.cs">
+      <DependentUpon>PhieuXuatKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\PhieuXuatKho.aspx.designer.cs">
+      <DependentUpon>PhieuXuatKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Taikhoan.aspx.cs">
+      <DependentUpon>Taikhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Taikhoan.aspx.designer.cs">
+      <DependentUpon>Taikhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Nguoidung\Dangki.aspx.cs">
+      <DependentUpon>Dangki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Nguoidung\Dangki.aspx.designer.cs">
+      <DependentUpon>Dangki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Nguoidung\Dangnhap.aspx.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Nguoidung\Dangnhap.aspx.designer.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Mathang.aspx.cs">
+      <DependentUpon>Mathang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Mathang.aspx.designer.cs">
+      <DependentUpon>Mathang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Nhaphang.aspx.cs">
+      <DependentUpon>Nhaphang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Nhaphang.aspx.designer.cs">
+      <DependentUpon>Nhaphang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaDonHang.aspx.cs">
+      <DependentUpon>Them_SuaDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaDonHang.aspx.designer.cs">
+      <DependentUpon>Them_SuaDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaDonNhapHang.aspx.cs">
+      <DependentUpon>Them_SuaDonNhapHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaDonNhapHang.aspx.designer.cs">
+      <DependentUpon>Them_SuaDonNhapHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaMatHang.aspx.cs">
+      <DependentUpon>Them_SuaMatHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaMatHang.aspx.designer.cs">
+      <DependentUpon>Them_SuaMatHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaPhieuNhapKho.aspx.cs">
+      <DependentUpon>Them_SuaPhieuNhapKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaPhieuNhapKho.aspx.designer.cs">
+      <DependentUpon>Them_SuaPhieuNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaPhieuXuatKho.aspx.cs">
+      <DependentUpon>Them_SuaPhieuXuatKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaPhieuXuatKho.aspx.designer.cs">
+      <DependentUpon>Them_SuaPhieuXuatKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaTaiKhoan.aspx.cs">
+      <DependentUpon>Them_SuaTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Them_SuaTaiKhoan.aspx.designer.cs">
+      <DependentUpon>Them_SuaTaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBanHang\Trangchu.aspx.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBanHang\Trangchu.aspx.designer.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Client.Master.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Client.Master.designer.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Dangki.aspx.cs">
+      <DependentUpon>Dangki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Dangki.aspx.designer.cs">
+      <DependentUpon>Dangki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Dangnhap.aspx.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Dangnhap.aspx.designer.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Giohang.aspx.cs">
+      <DependentUpon>Giohang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Giohang.aspx.designer.cs">
+      <DependentUpon>Giohang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Timkiem.aspx.cs">
+      <DependentUpon>Timkiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Timkiem.aspx.designer.cs">
+      <DependentUpon>Timkiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Trangchitiet.aspx.cs">
+      <DependentUpon>Trangchitiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Trangchitiet.aspx.designer.cs">
+      <DependentUpon>Trangchitiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBanHang\Trangchu.aspx.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientBanHang\Trangchu.aspx.designer.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminBanHang\assets\css\maps\style.css.map" />
+    <Content Include="AdminBanHang\assets\documentation\.DS_Store" />
+    <Content Include="AdminBanHang\assets\fonts\.DS_Store" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\.DS_Store" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Black.eot" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Black.woff" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Black.woff2" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Bold.eot" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Bold.woff" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Bold.woff2" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Light.eot" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Light.woff" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Light.woff2" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Medium.eot" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Medium.woff" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Medium.woff2" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Regular.eot" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Regular.woff" />
+    <Content Include="AdminBanHang\assets\fonts\Roboto\Roboto-Regular.woff2" />
+    <Content Include="AdminBanHang\assets\images\.DS_Store" />
+    <Content Include="AdminBanHang\assets\images\auth\.DS_Store" />
+    <Content Include="AdminBanHang\assets\images\faces\.DS_Store" />
+    <Content Include="AdminBanHang\assets\js\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\charts\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\forms\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\icons\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\samples\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\tables\.DS_Store" />
+    <Content Include="AdminBanHang\assets\pages\ui-features\.DS_Store" />
+    <Content Include="AdminBanHang\assets\scss\.DS_Store" />
+    <Content Include="AdminBanHang\assets\scss\components\.DS_Store" />
+    <Content Include="AdminBanHang\assets\scss\components\plugin-overrides\_data-tables.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_badges.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_bootstrap-progress.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_buttons.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_cards.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_checkbox-radio.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_dropdown.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_forms.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_icons.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_lists.scss" />
+    <Content Include="AdminBanHang\assets\scss\components\_tables.scss" />
+    <Content Include="AdminBanHang\assets\scss\landing-screens\_auth.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\.DS_Store" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_animation.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_badges.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_blockqoute.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_buttons.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_cards.scss" />
+    <Content Include="AdminBanHang\assets\scss\mixins\_misc.scss" />
+    <Content Include="AdminBanHang\assets\scss\style.scss" />
+    <Content Include="AdminBanHang\assets\scss\_background.scss" />
+    <Content Include="AdminBanHang\assets\scss\_demo.scss" />
+    <Content Include="AdminBanHang\assets\scss\_fonts.scss" />
+    <Content Include="AdminBanHang\assets\scss\_footer.scss" />
+    <Content Include="AdminBanHang\assets\scss\_functions.scss" />
+    <Content Include="AdminBanHang\assets\scss\_layouts.scss" />
+    <Content Include="AdminBanHang\assets\scss\_misc.scss" />
+    <Content Include="AdminBanHang\assets\scss\_navbar.scss" />
+    <Content Include="AdminBanHang\assets\scss\_reset.scss" />
+    <Content Include="AdminBanHang\assets\scss\_sidebar.scss" />
+    <Content Include="AdminBanHang\assets\scss\_typography.scss" />
+    <Content Include="AdminBanHang\assets\scss\_utilities.scss" />
+    <Content Include="AdminBanHang\assets\scss\_variables.scss" />
+    <Content Include="AdminBanHang\assets\scss\_vertical-wrapper.scss" />
+    <Content Include="AdminBanHang\assets\vendors\.DS_Store" />
+    <Content Include="AdminBanHang\assets\vendors\base\bootstrap.min.js.map" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="AdminBanHang\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="AdminBanHang\Admin.Master" />
+    <Content Include="ClientBanHang\fonts\fontawesome-webfont.woff" />
+    <Content Include="ClientBanHang\fonts\FontAwesome.otf" />
+    <Content Include="ClientBanHang\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ClientBanHang\Client.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1684</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44321/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
