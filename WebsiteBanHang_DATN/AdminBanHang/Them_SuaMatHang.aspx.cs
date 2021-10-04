@@ -26,9 +26,9 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                     MaMH.Visible = false;
                     MaFileAnh.Visible = false;
                 }
-
             }
         }
+
         private void load_dsMathang()
         {
             if (Request.QueryString["IDMathang"] != "")
@@ -37,7 +37,7 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                 foreach (DataRow row in tb.Rows)
                 {
                     lbMaMH.Text = row["sMaMH"].ToString();
-                    lbFileAnh.Text  = row["sHinhanh"].ToString();
+                    lbFileAnh.Text = row["sHinhanh"].ToString();
                     txtTenMH.Text = row["sTenMH"].ToString();
                     txtDonvitinh.Text = row["sDonvitinh"].ToString();
                     txtMota.Text = row["sMota"].ToString();
@@ -68,9 +68,8 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                 ddlDanhmuc.DataBind();
                 load_dsLoaiMH_theoDM(int.Parse(ddlDanhmuc.SelectedValue));
             }
-            
         }
-        
+
         //private void load_dsLoaiMH()
         //{
         //    DataTable tb = Model.model.getData("get_dsLoaiMH");
@@ -97,7 +96,6 @@ namespace WebsiteBanHang_DATN.AdminBanHang
             string SaveLocation = Server.MapPath("~/AdminBanHang/assets/images/mathang/") + "\\" + fn;
             if ((fuMH.PostedFile != null) && (fuMH.PostedFile.ContentLength > 0))
             {
-
                 try
                 {
                     fuMH.PostedFile.SaveAs(SaveLocation);
@@ -105,21 +103,19 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                 }
                 catch (Exception ex)
                 {
-
                 }
             }
             else
             {
-
             }
 
-            int i = Model.model.Sua_MatHang("pr_Capnhat_DsMathang", Request.QueryString["IDMathang"].ToString(), txtTenMH.Text, fn, txtDonvitinh.Text, txtMota.Text, int.Parse(ddlLoaiMH.SelectedValue),int.Parse(ddlTrangthai.SelectedValue));
+            int i = Model.model.Sua_MatHang("pr_Capnhat_DsMathang", Request.QueryString["IDMathang"].ToString(), txtTenMH.Text, fn, txtDonvitinh.Text, txtMota.Text, int.Parse(ddlLoaiMH.SelectedValue), int.Parse(ddlTrangthai.SelectedValue));
             if (i > 0)
             {
                 Response.Write("<script languague='javascript'> alert('Cập nhập thông tin mặt hàng thành công !');window.location.href ='Mathang.aspx';</script>");
             }
             else
-                Response.Write("<script languague='javascript'> alert('Cập nhập thông tin mặt hàng không thành công !');</script>");
+                Response.Write("<script languague='javascript'> alert('Cập nhập thông tin mặt hàng thất bại !');</script>");
         }
 
         protected void btnQuaylai_Click(object sender, EventArgs e)
@@ -133,7 +129,6 @@ namespace WebsiteBanHang_DATN.AdminBanHang
             string SaveLocation = Server.MapPath("~/AdminBanHang/assets/images/mathang/") + "\\" + fn;
             if ((fuMH.PostedFile != null) && (fuMH.PostedFile.ContentLength > 0))
             {
-
                 try
                 {
                     fuMH.PostedFile.SaveAs(SaveLocation);
@@ -141,12 +136,10 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                 }
                 catch (Exception ex)
                 {
-
                 }
             }
             else
             {
-
             }
 
             int i = Model.model.Them_MatHang("pr_Them_DsMathang", txtTenMH.Text, fn, txtDonvitinh.Text, txtMota.Text, int.Parse(ddlLoaiMH.SelectedValue), int.Parse(ddlTrangthai.SelectedValue));
@@ -155,14 +148,12 @@ namespace WebsiteBanHang_DATN.AdminBanHang
                 Response.Write("<script languague='javascript'> alert('Thêm mặt hàng thành công !');window.location.href ='Mathang.aspx';</script>");
             }
             else
-                Response.Write("<script languague='javascript'> alert('Thêm mặt hàng không thành công !');</script>");
+                Response.Write("<script languague='javascript'> alert('Thêm mặt hàng thất bại !');</script>");
         }
 
         protected void btnThemLoaiMH_Click(object sender, EventArgs e)
         {
-
         }
-
 
         protected void ddlDanhmuc_SelectedIndexChanged(object sender, EventArgs e)
         {

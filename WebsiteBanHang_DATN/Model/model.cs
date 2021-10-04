@@ -9,7 +9,6 @@ namespace WebsiteBanHang_DATN.Model
 {
     public class SqlConnectionData
     {
-
         // kết nối cơ sở dữ liệu
         public static SqlConnection Connect()
         {
@@ -22,7 +21,7 @@ namespace WebsiteBanHang_DATN.Model
     public class model
     {
         // checklogin
-        public static SqlDataReader checklogin(string procedure ,string username, string password)
+        public static SqlDataReader checklogin(string procedure, string username, string password)
         {
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
@@ -35,6 +34,7 @@ namespace WebsiteBanHang_DATN.Model
 
             return reader;
         }
+
         public static int checklogin_Nguoidung(string username, string password)
         {
             SqlConnection conn = SqlConnectionData.Connect();
@@ -101,7 +101,6 @@ namespace WebsiteBanHang_DATN.Model
             return ret;
         }
 
-
         public static SqlDataReader getRow(string proc)
         {
             SqlConnection conn = SqlConnectionData.Connect();
@@ -151,7 +150,7 @@ namespace WebsiteBanHang_DATN.Model
             return ds.Tables[0];
         }
 
-        public static DataTable getDataWhere_2para(string id, string idnhanvien , string proceduce)
+        public static DataTable getDataWhere_2para(string id, string idnhanvien, string proceduce)
         {
             DataTable dtb = new DataTable();
             SqlConnection Conn = SqlConnectionData.Connect();
@@ -197,7 +196,7 @@ namespace WebsiteBanHang_DATN.Model
             int count = (int)cmnPXK.ExecuteScalar() + 1;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaDonDatHang", maDDH);
-            cmd.Parameters.AddWithValue("@MaPhieuXuatKho", "DDS-PXK-" +count.ToString());
+            cmd.Parameters.AddWithValue("@MaPhieuXuatKho", "DDS-PXK-" + count.ToString());
             int ret = cmd.ExecuteNonQuery();
             return ret;
         }
@@ -226,6 +225,7 @@ namespace WebsiteBanHang_DATN.Model
             int banghitacdong = command.ExecuteNonQuery();
             return banghitacdong;
         }
+
         public static int Sua_MatHang(string proceduce, string maMH, string tenMH, string hinhAnh, string donviTinh, string moTa, int maloaiMH, int maTrangthai)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
@@ -253,8 +253,8 @@ namespace WebsiteBanHang_DATN.Model
             int count = (int)cmdMaMH.ExecuteScalar() + 1;
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = Conn; 
-            cmd.Parameters.AddWithValue("@MaMH", "DDS-MH-"+count.ToString());
+            cmd.Connection = Conn;
+            cmd.Parameters.AddWithValue("@MaMH", "DDS-MH-" + count.ToString());
             cmd.Parameters.AddWithValue("@TenMH", tenMH);
             cmd.Parameters.AddWithValue("@Hinhanh", hinhAnh);
             cmd.Parameters.AddWithValue("@Donvitinh", donviTinh);
@@ -280,7 +280,7 @@ namespace WebsiteBanHang_DATN.Model
             cmd.Parameters.AddWithValue("@Giomocua", gioMocua);
             cmd.Parameters.AddWithValue("@Giodongcua", giocDongcua);
             cmd.Parameters.AddWithValue("@Mota", moTa);
-            cmd.Parameters.AddWithValue("@TenDangNhap", tenDN); 
+            cmd.Parameters.AddWithValue("@TenDangNhap", tenDN);
             int ret = cmd.ExecuteNonQuery();
             return ret;
         }
@@ -294,7 +294,7 @@ namespace WebsiteBanHang_DATN.Model
             int count = (int)cmdDDH.ExecuteScalar() + 1;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = Conn;
-            cmd.Parameters.AddWithValue("@MaDonDatHang", "DDS-DDH-"+count.ToString());
+            cmd.Parameters.AddWithValue("@MaDonDatHang", "DDS-DDH-" + count.ToString());
             cmd.Parameters.AddWithValue("@MaNV", maNV);
             cmd.Parameters.AddWithValue("@TenKH", sTenKH);
             cmd.Parameters.AddWithValue("@Sdt", sdt);
@@ -356,7 +356,7 @@ namespace WebsiteBanHang_DATN.Model
             return ret;
         }
 
-        public static int insert_Chitietdathang_Khachhang_Ngoaihethong(string proceduce,string maDDH, string maMH, int slMua, int maSize)
+        public static int insert_Chitietdathang_Khachhang_Ngoaihethong(string proceduce, string maDDH, string maMH, int slMua, int maSize)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
             Conn.Open();
@@ -408,6 +408,7 @@ namespace WebsiteBanHang_DATN.Model
             int ret = cmd.ExecuteNonQuery();
             return ret;
         }
+
         public static int Them_ChiTietDatHang_KhachHang(string proceduce, string maMH, int slMua, int maSize)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
@@ -491,7 +492,7 @@ namespace WebsiteBanHang_DATN.Model
             return reader;
         }
 
-        public static int capnhat_Trangthai_Mathang(string proceduce,string maMH, int maTrangthai)
+        public static int capnhat_Trangthai_Mathang(string proceduce, string maMH, int maTrangthai)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
             Conn.Open();
@@ -518,6 +519,7 @@ namespace WebsiteBanHang_DATN.Model
             adapter.Fill(ds); // đẩy câu lệnh vừa truy vấn được vào dataset
             return ds.Tables[0];
         }
+
         public static int them_Donnhaphang(string proceduce, int maNV, int maNSX)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
@@ -527,7 +529,7 @@ namespace WebsiteBanHang_DATN.Model
             int count = (int)cmdMaDNH.ExecuteScalar() + 1;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = Conn;
-            cmd.Parameters.AddWithValue("@MaDonDatHang", "DDS-DNH-" +count.ToString());
+            cmd.Parameters.AddWithValue("@MaDonDatHang", "DDS-DNH-" + count.ToString());
             cmd.Parameters.AddWithValue("@iMaNV", maNV);
             cmd.Parameters.AddWithValue("@iMaNSX", maNSX);
             int ret = cmd.ExecuteNonQuery();
@@ -549,7 +551,7 @@ namespace WebsiteBanHang_DATN.Model
             return ret;
         }
 
-        public static int them_Chitiet_Donnhaphang(string proceduce, string maDNH, string maMH , float giaNhap ,int soluongNhap , float mucChietkhau, int maSize)
+        public static int them_Chitiet_Donnhaphang(string proceduce, string maDNH, string maMH, float giaNhap, int soluongNhap, float mucChietkhau, int maSize)
         {
             SqlConnection Conn = SqlConnectionData.Connect();
             Conn.Open();
@@ -561,7 +563,7 @@ namespace WebsiteBanHang_DATN.Model
             cmd.Parameters.AddWithValue("@Gianhap", giaNhap);
             cmd.Parameters.AddWithValue("@Soluongnhap", soluongNhap);
             cmd.Parameters.AddWithValue("@Mucchietkhau", mucChietkhau);
-            cmd.Parameters.AddWithValue("@Masize", maSize); 
+            cmd.Parameters.AddWithValue("@Masize", maSize);
             int ret = cmd.ExecuteNonQuery();
             return ret;
         }

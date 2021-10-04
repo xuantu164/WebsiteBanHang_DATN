@@ -17,7 +17,7 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <![endif]-->
     <link rel="shortcut icon" href="images/logo-web-mini.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -67,13 +67,13 @@
 				</div>
 			</div>
 		</div><!--/header_top-->
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 clearfix">
 						<div class="logo pull-left">
-							<a href="Trangchu.aspx"><img src="images/logo-web.png" alt="" style="width: 139px; height: 39px;"/></a>
+							<a href="Trangchu.aspx"><img src="images/logo-web.png" alt="" style="width: 139px; height: 39px;" /></a>
 						</div>
 					</div>
 					<div class="col-md-8 clearfix">
@@ -82,9 +82,9 @@
 								<li class="dropdown" id="taikhoan" runat="server"><a href="#"><i class="fa fa-user"></i>Tài khoản</a>
                                     <ul role="menu" class="sub-menu">
                                          <li><a class="btnx" href="Dangnhap.aspx">Đăng nhập</a></li>
-										<li><a href="Dangki.aspx">Đăng ký</a></li> 
+										<li><a href="Dangki.aspx">Đăng ký</a></li>
                                     </ul>
-                                </li> 
+                                </li>
 								 <li class="dropdown"><a href="Giohang.aspx"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
 							</ul>
 						</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
@@ -110,16 +110,16 @@
 								<li><a href="Trangchu.aspx" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a href="#">Cửa hàng<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-										<li><a href="Trangchitiet.aspx">Thời trang thể thao</a></li> 
-										<li><a href="Trangchitiet.aspx"">Phụ kiện thể thao</a></li> 
+										<li><a href="Trangchitiet.aspx">Thời trang thể thao</a></li>
+										<li><a href="Trangchitiet.aspx"">Phụ kiện thể thao</a></li>
                                     </ul>
-                                </li> 
+                                </li>
 								<li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="#">Thể thao</a></li>
 										<li><a href="#">Liên quan</a></li>
                                     </ul>
-                                </li> 
+                                </li>
 								<li><a href="#top" style="transition: 0.5s;">Giới thiệu</a></li>
 								<li><a href="#">Liên hệ</a></li>
 							</ul>
@@ -142,7 +142,7 @@
 			<div class="container">
 			</div>
 		</div>
-		
+
 		<div class="footer-widget">
 			<div class="container">
 				<div class="row">
@@ -204,11 +204,10 @@
 							</form>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
@@ -217,7 +216,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</footer><!--/Footer-->
         </div>
 

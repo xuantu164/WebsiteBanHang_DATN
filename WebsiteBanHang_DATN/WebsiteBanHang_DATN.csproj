@@ -102,6 +102,7 @@
     <Content Include="AdminBanHang\assets\images\faces\face9.jpg" />
     <Content Include="AdminBanHang\assets\images\fav-icon.png" />
     <Content Include="AdminBanHang\assets\images\favicon.png" />
+    <Content Include="AdminBanHang\assets\images\how-to-create-css-preloader.gif" />
     <Content Include="AdminBanHang\assets\images\logo-mini.svg" />
     <Content Include="AdminBanHang\assets\images\logo-web-mini.png" />
     <Content Include="AdminBanHang\assets\images\logo-web.png" />
@@ -146,6 +147,7 @@
     <Content Include="AdminBanHang\assets\images\mathang\aotuyen_han_do.png" />
     <Content Include="AdminBanHang\assets\images\mathang\aotuyen_han_xanh.png" />
     <Content Include="AdminBanHang\assets\images\mathang\aotuyen_phap.png" />
+    <Content Include="AdminBanHang\assets\images\page-loader.gif" />
     <Content Include="AdminBanHang\assets\js\chart.js" />
     <Content Include="AdminBanHang\assets\js\Chart.min.js" />
     <Content Include="AdminBanHang\assets\js\dashboard.js" />

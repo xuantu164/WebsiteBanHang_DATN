@@ -43,8 +43,7 @@
                             </div>
                    </div>
 
-                    
-                  <h3 class="card-title" style="margin-top: 50px;">Danh sách mặt hàng</h3>  
+                  <h3 class="card-title" style="margin-top: 50px;">Danh sách mặt hàng</h3>
                   <div class="table-responsive pt-3">
                       <asp:Repeater ID="rptChitietdonhang" runat="server" OnItemCommand="rptChitietdonhang_ItemCommand">
                           <HeaderTemplate>
@@ -79,7 +78,6 @@
                           <HeaderTemplate>
                               <table class="table table-bordered">
                                 <thead>
-                                    
                                 </thead>
                           </HeaderTemplate>
                           <ItemTemplate>
@@ -95,7 +93,6 @@
                        </asp:Repeater>
                 </div>
 
-
     <!-- Bootstrap Modal Dialog -->
     <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -109,7 +106,6 @@
                                 <p class="card-description">Hóa đơn: <b><asp:Label ID="lbHoadon" runat="server" Text=""></asp:Label></b></p>
                                 <p class="card-description" id="P1" runat="server">Phiếu xuất kho: <b><asp:Label ID="lbPXK" runat="server" Text=""></asp:Label></b></p>
                             </div>
-                        
                         </div>
                         <div class="modal-body">
                             <div class="card-body">
@@ -153,7 +149,6 @@
                               <HeaderTemplate>
                                   <table class="table table-bordered">
                                     <thead>
-                                    
                                     </thead>
                               </HeaderTemplate>
                               <ItemTemplate>
@@ -179,15 +174,15 @@
             </asp:UpdatePanel>
         </div>
     </div>
-                    <asp:Button ID="btnHuyDuyet" runat="server" Visible="false" Text="Bỏ xác nhận" CssClass="btn btn-primary" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc không muốn duyệt đơn nhập hàng này ? ')) return false;"/>
+                    <asp:Button ID="btnHuyDuyet" runat="server" Visible="false" Text="Bỏ xác nhận" CssClass="btn btn-primary" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc không muốn duyệt đơn nhập hàng này ? ')) return false;" />
                     <asp:Button ID="btnDuyet" runat="server" Text="Xác nhận đơn hàng" CssClass="btn btn-primary" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc muốn duyệt đơn nhập hàng này ? ')) return false;" OnClick="btnDuyet_Click" />
                     <asp:Button ID="btnXoaDonHang_Chuaduyet" Visible="false" runat="server" Text="Xóa" CssClass="btn btn-danger" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc muốn xóa đơn đặt hàng này ? ')) return false;" />
-                    <asp:Button ID="btnInhoadon" runat="server" Text="Xuất hóa đơn" Visible=false CssClass="btn btn-primary" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc muốn in hóa đơn này ? ')) return false;" OnClick="btnInhoadon_Click"/>
-                    <asp:Button ID="btnQuaylai" runat="server" Text="Quay lại" CssClass="btn btn-secondary" style="margin-top: 20px;" OnClick="btnQuaylai_Click"/>
+                    <asp:Button ID="btnInhoadon" runat="server" Text="Xuất hóa đơn" Visible=false CssClass="btn btn-primary" style="margin-top: 20px;" OnClientClick="if (!confirm('Bạn có chắc muốn in hóa đơn này ? ')) return false;" OnClick="btnInhoadon_Click" />
+                    <asp:Button ID="btnQuaylai" runat="server" Text="Quay lại" CssClass="btn btn-secondary" style="margin-top: 20px;" OnClick="btnQuaylai_Click" />
               </div>
             </div>
         <!-- partial:../../partials/_footer.html -->
-        
+
         <!-- partial -->
       </div>
         </div>
